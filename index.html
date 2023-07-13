@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        position: relative;
+    }
+
+    #btn-game{
+        position: absolute;
+        left: 100px;
+        top: 100px;
+    }
+</style>
+<body>
+     <!-- <script>
+        window.onload = function(){
+            let a = document.getElementById("demo");
+            console.log(a);
+        }
+    </script> -->
+    <!-- <h1 id="demo" onmouseover="check()" onmouseout="checkOut()">Day la demo</h1> -->
+    <!-- Catch Me If You Can -->
+
+    <!-- <button id="btn-game" onclick="clickHere()">Im here</button> -->
+    <img src="demo.png" width="100" style="left: 100px;" alt="" id="btn-game" onclick="clickHere()">
+
+    <input onchange="checkInput()" type="text" placeholder="Nhập gì cũng được" id="anyInput">
+    <button id="btn-check">Send</button>
+    <script>
+        // setInterval(changePos, 2000)
+        // // setTimeout(changePos,5000)
+
+        // function changePos() {
+        //     // Math.random() 0 -> 0.99999
+        //     // Math.floor => 4.9 => 4
+        //     // Math.round => 4.4 -> 4, 4.9 -> 5
+        //     // Math.ceil => 4.1 -> 5
+        //     // window.innerWidth <=> window.width
+        //     console.log(window.innerWidth);
+        //     // console.log(window.width);
+        //     let left = Math.floor(Math.random() * (window.innerWidth-100));
+        //     let top = Math.floor(Math.random() * window.innerHeight);
+
+        //     document.getElementById("btn-game").style.left = left + "px";
+        //     document.getElementById("btn-game").style.top = top + "px";
+        // }
+
+        // function check(){
+        //     document.getElementById("demo").style.color = "red";
+        //     document.getElementById("demo").style.cursor = "pointer";
+        // }
+
+        // function checkOut(){
+        //     document.getElementById("demo").style.color = "blue";
+        // }
+
+        // function clickHere() {
+        //     alert("Đập trúng rồi")
+        // }
+
+        function moveRight() {
+            
+        
+            let left = document.getElementById("btn-game").style.left;
+            let top = parseInt(document.getElementById("btn-game").style.top);
+            left = parseInt(left) + 10;
+
+            document.getElementById("btn-game").style.left = left + "px";
+            document.getElementById("btn-game").style.top = top + "px";
+        }
+
+        function moveLeft() {
+            
+        
+            let left = document.getElementById("btn-game").style.left;
+            let top = parseInt(document.getElementById("btn-game").style.top);
+            left = parseInt(left) - 10;
+
+            document.getElementById("btn-game").style.left = left + "px";
+            document.getElementById("btn-game").style.top = top + "px";
+        }
+        
+        
+
+        function checkInput(){
+            let a = document.getElementById("anyInput").value;
+            console.log(a);
+        }
+
+        function btnCheck() {
+            alert("Check")
+        }
+
+        // let btn = document.getElementById("btn-check");
+        // btn.addEventListener("click", btnCheck) 
+
+        window.addEventListener("keydown", function(keyInput) {
+            console.log(keyInput.key);
+            if(keyInput.key == "d"){
+                moveRight();
+            }
+
+            if(keyInput.key == "a"){
+                moveLeft();
+            }
+        });
+        
+    </script>
+</body>
+</html>

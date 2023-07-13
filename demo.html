@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <!-- innerText/innerHTML-->
+      <p id="dom">DOM</p>
+      <h1>Element</h1>
+   <!-- <p id="result"></p> 
+          <button onclick="chuyenTrang()">chuyển trang</button>-->
+        <script>
+            let e = document.getElementById("dom")
+            e.innerHTML = "<b>Nội dung khác DOM<b>"
+                e.style.color = "red"
+                e.style.fontSize = "20px"
+               // e.remove(); xoá
+          //  document.getElementById("body").appendChild(document.createElement("input"))
+        // function chuyenTrang() {
+            //window.location.href = "https:google.com"//
+           // window.localStorage.setItem("demo",123)
+           //let data = window.localStorage.getItem("demo")
+          // document.getElementById("result").innerText = data;
+       //  }
+        </script>
+</body>
+</html>
